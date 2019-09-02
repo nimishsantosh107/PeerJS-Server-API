@@ -2,6 +2,8 @@
 / 		- 	default
 /peer 	- 	peer-server
 /status - 	status of site
+
+URL - https://peerjs-server-api.herokuapp.com/
 */
 
 const express = require('express');
