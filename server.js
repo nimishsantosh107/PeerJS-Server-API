@@ -10,6 +10,7 @@ URL - https://peerjs-server-api.herokuapp.com/
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 const http = require('http');
 const socketIO = require('socket.io'); 
 const ExpressPeerServer = require('peer').ExpressPeerServer;
@@ -23,7 +24,7 @@ app.use(cors());
 
 //SEE IF SITE IS RUNNING
 app.get('/status', function(req, res) { res.send('SERVER UP'); });
-app.get('/privacypolicy', function (req, res,) { res.sendFile('privacypolicy.html'); });
+app.get('/privacypolicy', function (req, res,) { res.sendFile(path.join(__dirname,'privacypolicy.html')); });
 
 //LAUNCH
 server.listen(PORT, ()=>{console.log(`SERVER UP ON PORT: ${PORT}`)});
