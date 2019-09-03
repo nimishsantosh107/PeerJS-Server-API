@@ -2,6 +2,7 @@
 / 		- 	default
 /peer 	- 	peer-server
 /status - 	status of site
+/privacypolicy - PP
 
 URL - https://peerjs-server-api.herokuapp.com/
 */
@@ -21,7 +22,8 @@ var io = socketIO(server);
 app.use(cors());
 
 //SEE IF SITE IS RUNNING
-app.get('/status', function(req, res, next) { res.send('SERVER UP'); });
+app.get('/status', function(req, res) { res.send('SERVER UP'); });
+app.get('/privacypolicy', function (req, res,) { res.sendFile('privacypolicy.html'); });
 
 //LAUNCH
 server.listen(PORT, ()=>{console.log(`SERVER UP ON PORT: ${PORT}`)});
