@@ -13,7 +13,7 @@ const path = require('path');
 const http = require('http');
 const socketIO = require('socket.io');
 const axios = require('axios');
-var firebase = require('firebase');
+const firebase = require('firebase');
 
 
   // Your web app's Firebase configuration
